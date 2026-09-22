@@ -8,7 +8,7 @@ import ThemeToggle from './ThemeToggle';
 const LEFT_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Blogs', href: '/blogs' },
+  { label: 'Reviews', href: '/reviews' },
 ];
 const RIGHT_LINKS = [
   { label: 'Pricing', href: '/pricing' },
@@ -55,7 +55,10 @@ const MORE_SECTIONS = [
   },
   {
     heading: 'Resources',
-    links: [{ label: 'Cost Calculator', href: '/price-calculator' }],
+    links: [
+      { label: 'Blogs', href: '/blogs' },
+      { label: 'Cost Calculator', href: '/price-calculator' },
+    ],
   },
 ];
 const MORE_HREFS = new Set(MORE_SECTIONS.flatMap((s) => s.links.map((l) => l.href)));

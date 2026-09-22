@@ -44,6 +44,7 @@ const Footer = () => {
               <Link href="/" className="text-sm text-ink/55 hover:text-ink transition-colors block">Home</Link>
               <Link href="/portfolio" className="text-sm text-ink/55 hover:text-ink transition-colors block">Portfolio</Link>
               <Link href="/pricing" className="text-sm text-ink/55 hover:text-ink transition-colors block">Pricing</Link>
+              <Link href="/reviews" className="text-sm text-ink/55 hover:text-ink transition-colors block">Reviews</Link>
               <Link href="/blogs" className="text-sm text-ink/55 hover:text-ink transition-colors block">Blogs</Link>
               <Link href="/price-calculator" className="text-sm text-ink/55 hover:text-ink transition-colors block">Cost Calculator</Link>
               <Link href="/contact" className="text-sm text-ink/55 hover:text-ink transition-colors block">Contact</Link>

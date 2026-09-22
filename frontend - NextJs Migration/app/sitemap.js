@@ -34,6 +34,7 @@ export default function sitemap() {
         "/",
         "/portfolio",
         "/pricing",
+        "/reviews",
         "/contact",
         "/blogs",
         "/price-calculator",
