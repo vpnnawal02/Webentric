@@ -44,7 +44,7 @@ export default function ContactPage() {
             Tell us what you&apos;re building, what you need, and where you want to go next.
             We reply within 24 hours on business days.
           </p>
-          <p className="mt-3 text-xs uppercase tracking-[0.18em] text-ink/45">Based in New Delhi · Serving clients across India</p>
+          <p className="mt-3 text-xs uppercase tracking-[0.18em] text-ink/45">D94, Madipur, New Delhi – 110063 · Serving clients across India</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.25fr_0.75fr] gap-8 lg:gap-10 items-start">
@@ -93,6 +93,13 @@ export default function ContactPage() {
                   </p>
                   <p className="text-ink/82">Mon–Fri, 10 AM – 6 PM IST</p>
                 </div>
+
+                <address className="not-italic">
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-ink/35 mb-1">
+                    Address
+                  </p>
+                  <p className="text-ink/82">D94, Madipur, New Delhi – 110063</p>
+                </address>
               </div>
 
               <div className="flex items-center gap-4 pt-7 mt-7 border-t border-line text-ink/72">

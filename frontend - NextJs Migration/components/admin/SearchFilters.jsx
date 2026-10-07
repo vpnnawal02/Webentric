@@ -17,7 +17,7 @@ export default function SearchFilters({
                     type="text"
                     value={searchTerm}
                     onChange={(e) => onSearchChange(e.target.value)}
-                    placeholder="Search by name, email, or phone"
+                    placeholder="Search by name, email, phone, or details"
                     className="mt-1 w-full rounded-xs border border-edge bg-surface px-2 py-1 text-xs text-ink placeholder:text-muted/70 focus:border-muted focus:outline-none focus:ring-0"
                 />
             </div>

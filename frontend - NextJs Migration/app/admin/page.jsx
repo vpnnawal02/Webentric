@@ -31,7 +31,8 @@ export default function AdminDashboardPage() {
                 !term ||
                 lead.name?.toLowerCase().includes(term) ||
                 lead.email?.toLowerCase().includes(term) ||
-                lead.phone?.toLowerCase().includes(term);
+                lead.phone?.toLowerCase().includes(term) ||
+                lead.details?.toLowerCase().includes(term);
             const matchesStatus =
                 statusFilter === "all" || (lead.status || "new") === statusFilter;
             return matchesSearch && matchesStatus;

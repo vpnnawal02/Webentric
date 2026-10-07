@@ -123,6 +123,15 @@ export default function ReviewsPage() {
             name: 'Webentric',
             url: `${SITE.url}/reviews`,
             image: SITE.logo,
+            telephone: SITE.phone,
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: SITE.address.street,
+              addressLocality: SITE.address.locality,
+              addressRegion: SITE.address.region,
+              postalCode: SITE.address.postalCode,
+              addressCountry: SITE.address.country,
+            },
             aggregateRating: {
               '@type': 'AggregateRating',
               ratingValue: Number(avgRating),

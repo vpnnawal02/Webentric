@@ -1,7 +1,7 @@
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
-import { Star, Phone } from "lucide-react";
+import { Star } from "lucide-react";
 import HeroMarquee from "./HeroMarquee.jsx";
+import CallbackForm from "./CallbackForm.jsx";
 
 /* Official Google "G" mark in brand colors. */
 const GoogleG = ({ className = "" }) => (
@@ -34,16 +34,12 @@ const Hero = () => {
 
           {/* Left intro block | Lower Block for Mobile */}
           <div className="border-b lg:border-b-0 lg:border-r border-ink/40 px-5 sm:px-8 lg:px-10 pb-10 py-0 sm:py-12 lg:py-14 flex items-center">
-            <div className="max-w-[360px]">
+            <div className="max-w-[360px] ">
               <p className="text-ink/70 text-[18px] leading-6 mb-5 sm:mb-6">
                 We’re a full-service website design and development agency crafting modern
                 brands, websites, and products that drive results.
               </p>
-              <a href="tel:+919560342636" className="inline-flex items-center gap-2 text-sm font-medium text-ink/70 mb-5 sm:mb-6">
-                <button className="inline-flex items-center gap-2 bg-accent text-on-accent px-5 py-2.5 text-sm font-medium hover:bg-accent/85 transition-all duration-300">
-                  Call Now
-                  <FiArrowUpRight size={14} />
-                </button></a>
+              <CallbackForm />
 
               <div className="mt-8 sm:mt-10 md:hidden flex flex-row items-center justify-start md:justify-start gap-4 sm:gap-8">
                 <div className="flex items-center gap-2">

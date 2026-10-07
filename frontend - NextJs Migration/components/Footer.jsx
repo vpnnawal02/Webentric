@@ -76,13 +76,16 @@ const Footer = () => {
                 <p className="text-xs uppercase tracking-[0.14em] text-ink/35 mb-1">Email</p>
                 <a href="mailto:webentric2026@gmail.com" className="text-sm text-ink/60 hover:text-ink transition-colors">webentric2026@gmail.com</a>
               </div>
-              <div>
+              <address className="not-italic">
                 <p className="text-xs uppercase tracking-[0.14em] text-ink/35 mb-1">Location</p>
                 <p className="text-sm text-ink/60">
+                  D94, Madipur, New Delhi – 110063
+                </p>
+                <p className="text-sm text-ink/60 mt-1">
                   <Link href="/locations/delhi" className="hover:text-ink transition-colors">Delhi</Link>, India ·{' '}
                   <Link href="/about" className="hover:text-ink transition-colors">About us</Link>
                 </p>
-              </div>
+              </address>
             </div>
             <a
               href="https://wa.me/message/IK7VVIWKOELZL1"

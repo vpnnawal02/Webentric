@@ -5,8 +5,10 @@ export const SITE = {
     phone: '+91-9560342636',
     locale: 'en_IN',
     address: {
+        street: 'D94, Madipur',
         locality: 'New Delhi',
         region: 'Delhi',
+        postalCode: '110063',
         country: 'IN',
     },
     geo: { lat: 28.6139, lng: 77.2090 },
@@ -79,8 +81,10 @@ export function localBusinessSchema() {
         priceRange: '₹₹',
         address: {
             '@type': 'PostalAddress',
+            streetAddress: SITE.address.street,
             addressLocality: SITE.address.locality,
             addressRegion: SITE.address.region,
+            postalCode: SITE.address.postalCode,
             addressCountry: SITE.address.country,
         },
         geo: {

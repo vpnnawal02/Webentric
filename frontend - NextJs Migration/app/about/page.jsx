@@ -127,7 +127,7 @@ export default function AboutPage() {
         <section className="mt-16 md:mt-20" aria-label="Where Webentric operates">
           <h2 className="text-2xl sm:text-3xl font-medium tracking-[-0.02em] mb-6">Where we operate</h2>
           <address className="not-italic text-muted text-[15px] sm:text-base leading-relaxed max-w-3xl">
-            Based in New Delhi, India — serving clients across Delhi, Delhi NCR (including{' '}
+            Webentric, D94, Madipur, New Delhi – 110063, India — serving clients across Delhi, Delhi NCR (including{' '}
             <Link href="/locations/noida" className="text-ink underline underline-offset-4">Noida</Link> and{' '}
             <Link href="/locations/gurgaon" className="text-ink underline underline-offset-4">Gurgaon</Link>), and
             the rest of India. Phone:{' '}
