@@ -10,13 +10,28 @@ export const metadata = {
     description:
         "Practical guides on website cost, design, SEO & maintenance for Indian businesses — from a website development company in Delhi.",
     alternates: { canonical: "https://webentric.in/blogs" },
+    openGraph: {
+        title: "Web Design & Development Blog India | Webentric",
+        description:
+            "Practical guides on website cost, design, SEO & maintenance for Indian businesses — from a website development company in Delhi.",
+        url: "https://webentric.in/blogs",
+        type: "website",
+        images: [{ url: "https://webentric.in/social-media-cover.png", width: 1200, height: 630, alt: "Webentric blog — web design and development guides" }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Web Design & Development Blog India | Webentric",
+        description:
+            "Practical guides on website cost, design, SEO & maintenance for Indian businesses.",
+        images: ["https://webentric.in/social-media-cover.png"],
+    },
 };
 
 export default function BlogsPage() {
     const sortedBlogs = sortBlogs(blogs, "newest");
 
     return (
-        <section className="min-h-screen bg-page text-ink px-4 sm:px-8 md:px-16 lg:px-24 pt-28 pb-20">
+        <main className="min-h-screen bg-page text-ink px-4 sm:px-8 md:px-16 lg:px-24 pt-28 pb-20">
             <JsonLd
                 data={[
                     blogSchema({
@@ -55,6 +70,6 @@ export default function BlogsPage() {
                     ))}
                 </div>
             </div>
-        </section>
+        </main>
     );
 }

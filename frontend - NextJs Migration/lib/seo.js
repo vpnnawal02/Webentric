@@ -103,6 +103,23 @@ export function localBusinessSchema() {
     };
 }
 
+export function serviceSchema({ name, url, description, serviceType }) {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name,
+        url,
+        description,
+        ...(serviceType ? { serviceType } : {}),
+        provider: { '@id': ORG_ID },
+        areaServed: [
+            { '@type': 'City', name: 'New Delhi' },
+            { '@type': 'AdministrativeArea', name: 'Delhi NCR' },
+            { '@type': 'Country', name: 'India' },
+        ],
+    };
+}
+
 export function breadcrumbSchema(items) {
     return {
         '@context': 'https://schema.org',

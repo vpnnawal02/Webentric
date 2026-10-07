@@ -1,5 +1,5 @@
 import React from "react";
-import { FiArrowRight } from "react-icons/fi";
+import Image from "next/image";
 import { images } from '../lib/assets.js';
 
 const About = () => {
@@ -21,6 +21,9 @@ const About = () => {
                             interfaces to scalable web platforms, we combine creativity and
                             technology to deliver meaningful results.
                         </p>
+                        <a href="/about" className="inline-block mt-5 text-sm text-ink underline underline-offset-4 decoration-line hover:decoration-ink transition-colors">
+                            More about Webentric &rarr;
+                        </a>
                     </div>
 
                     {/* Right visual layout */}
@@ -29,9 +32,13 @@ const About = () => {
                         <div className=" gap-4 sm:gap-5 pt-10 sm:pt-12">
                             <div className="col-span-7">
                                 <div className="overflow-hidden bg-subtle w-full h-[230px] sm:h-[360px] md:h-[260px] lg:h-[390px]">
-                                    <img
+                                    <Image
                                         src={images.about}
-                                        alt="Workspace and design environment"
+                                        alt="Webentric team designing and developing a business website for a client in Delhi"
+                                        width={900}
+                                        height={620}
+                                        loading="lazy"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>

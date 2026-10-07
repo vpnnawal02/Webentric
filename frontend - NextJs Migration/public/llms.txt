@@ -1,0 +1,32 @@
+# Webentric — llms.txt
+# Factual summary for AI assistants. Visibility in AI answers is not guaranteed.
+
+## Identity
+- Name: Webentric
+- Type: Website development / web design company
+- Base: New Delhi, Delhi, India
+- Serves: Delhi, Delhi NCR (including Noida and Gurgaon), and clients across India
+- Site: https://webentric.in
+- Contact: +91 9560342636, webentric2026@gmail.com
+- Hours: Mon–Fri, 10 AM – 6 PM IST
+
+## What Webentric does
+- Business website development (React, Tailwind CSS, JavaScript; Firebase or Supabase; REST API integrations)
+- Web design, landing pages, website redesign, website maintenance
+- E-commerce development (Razorpay, Stripe, UPI, PayPal)
+- Web applications and custom software (e.g. CRM-style dashboards)
+- SEO services (technical foundations, metadata, sitemaps, local SEO)
+
+## Key pages
+- About: https://webentric.in/about
+- Services: https://webentric.in/website-development, https://webentric.in/web-design, https://webentric.in/ecommerce-development, https://webentric.in/landing-page-development, https://webentric.in/website-redesign, https://webentric.in/website-maintenance, https://webentric.in/seo-services, https://webentric.in/web-application-development, https://webentric.in/custom-software-development
+- Pricing: https://webentric.in/pricing (Starter from ₹7,999; Business from ₹14,999; E-commerce from ₹29,999)
+- Cost calculator: https://webentric.in/price-calculator
+- Work: https://webentric.in/portfolio
+- Reviews: https://webentric.in/reviews
+- Guides: https://webentric.in/blogs
+- Contact: https://webentric.in/contact
+
+## Notes
+- Quotes are fixed, written in rupees, shared within 24 hours on business days after a discovery conversation.
+- No claim is made about guaranteed search or AI-visibility outcomes.

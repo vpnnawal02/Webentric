@@ -1,5 +1,6 @@
 'use client';
 import { useRef, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown, ArrowUpRight } from 'lucide-react';
@@ -56,6 +57,7 @@ const MORE_SECTIONS = [
   {
     heading: 'Resources',
     links: [
+      { label: 'About', href: '/about' },
       { label: 'Blogs', href: '/blogs' },
       { label: 'Cost Calculator', href: '/price-calculator' },
     ],
@@ -132,7 +134,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="flex items-center justify-between h-16 lg:h-20">
             <Link href="/" className="flex items-center gap-2 lg:hidden">
-              <img src="/logo_circle.png" alt="Webentric logo" className="w-10 h-10" />
+              <Image src="/logo_circle.png" alt="Webentric — website development company in Delhi" width={40} height={40} className="w-10 h-10" />
               <span className="font-semibold tracking-[0.2em] text-lg sm:text-base text-ink uppercase">Webentric</span>
             </Link>
             <div className="hidden lg:flex items-center justify-between w-full">
@@ -145,7 +147,7 @@ export default function Navbar() {
                 ))}
               </div>
               <Link href="/" className="flex items-center gap-2 mx-6">
-                <img src="/logo_circle.png" alt="Webentric logo" className="w-10 h-10" />
+                <Image src="/logo_circle.png" alt="Webentric — website development company in Delhi" width={40} height={40} className="w-10 h-10" priority={false} />
                 <span className="font-semibold tracking-[0.25em] text-base xl:text-lg text-ink uppercase">Webentric</span>
               </Link>
               <div className="flex items-center gap-2 xl:gap-4">
@@ -241,7 +243,7 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between px-5 sm:px-6 pt-6 pb-4 border-b border-line">
           <span className="flex items-center gap-2">
-            <img src="/logo_circle.png" alt="Webentric logo" className="w-10 h-10" />
+            <Image src="/logo_circle.png" alt="Webentric — website development company in Delhi" width={40} height={40} className="w-10 h-10" />
             <span className="text-sm sm:text-base font-semibold tracking-[0.2em] text-ink uppercase">Webentric</span>
           </span>
           <div className="flex items-center gap-2.5">

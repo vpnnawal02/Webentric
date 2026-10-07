@@ -111,7 +111,8 @@ export const metadata = {
         card: "summary_large_image",
         title: PAGE.name,
         description: PAGE.description,
-    },
+    images: ["https://webentric.in/social-media-cover.png"],
+  },
 };
 
 export default function NoidaLocationPage() {

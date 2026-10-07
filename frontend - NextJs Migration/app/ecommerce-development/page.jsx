@@ -143,6 +143,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Website Development Company India | Webentric',
     description: DESCRIPTION,
+    images: ["https://webentric.in/social-media-cover.png"],
   },
 };
 

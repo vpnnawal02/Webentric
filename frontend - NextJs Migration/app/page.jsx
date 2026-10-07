@@ -63,6 +63,7 @@ export const metadata = {
     title: 'Website Development Company in Delhi, India',
     description:
       'Webentric is a website development company in Delhi, India building fast, SEO-friendly business websites, e-commerce stores & landing pages that convert.',
+    images: ["https://webentric.in/social-media-cover.png"],
   },
 };
 

@@ -112,7 +112,7 @@ export default function PricingPage() {
     };
 
     return (
-        <div className="relative bg-page min-h-screen text-ink">
+        <main className="relative bg-page min-h-screen text-ink">
             <JsonLd
                 data={[
                     webPageSchema({ name: 'Website Design Pricing in Delhi, India', url: `${SITE.url}/pricing`, description: 'Website design pricing for businesses in Delhi, India.' }),
@@ -323,40 +323,51 @@ export default function PricingPage() {
                     </h3>
 
                     <div className="max-w-3xl mx-auto space-y-4">
-                        {faqs.map((faq, index) => (
+                        {faqs.map((faq, index) => {
+                            const isOpen = activeFaq === index;
+                            return (
                             <div
                                 key={index}
                                 className="bg-surface border border-line overflow-hidden transition-all"
                             >
+                                <h4 className="m-0">
                                 <button
                                     type="button"
                                     onClick={() => toggleFaq(index)}
                                     className="w-full p-6 flex items-center justify-between text-left hover:bg-raised transition-colors"
-                                    aria-expanded={activeFaq === index}
+                                    aria-expanded={isOpen}
+                                    aria-controls={`pricing-faq-${index}`}
                                 >
-                                    <h4 className="font-medium text-ink text-lg pr-4">
+                                    <span className="font-medium text-ink text-lg pr-4">
                                         {faq.question}
-                                    </h4>
+                                    </span>
 
-                                    {activeFaq === index ? (
+                                    {isOpen ? (
                                         <ChevronUp size={22} className="text-ink/45 flex-shrink-0" />
                                     ) : (
                                         <ChevronDown size={22} className="text-ink/45 flex-shrink-0" />
                                     )}
                                 </button>
+                                </h4>
 
-                                {activeFaq === index && (
-                                    <div className="px-6 pb-6 pt-0">
-                                        <p className="text-ink/60 leading-relaxed">
-                                            {faq.answer}
-                                        </p>
+                                <div
+                                    id={`pricing-faq-${index}`}
+                                    className={`grid transition-[grid-template-rows] duration-300 ease-out ${isOpen ? '[grid-template-rows:1fr]' : '[grid-template-rows:0fr]'}`}
+                                >
+                                    <div className="overflow-hidden">
+                                        <div className="px-6 pb-6 pt-0">
+                                            <p className="text-ink/60 leading-relaxed">
+                                                {faq.answer}
+                                            </p>
+                                        </div>
                                     </div>
-                                )}
+                                </div>
                             </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }

@@ -58,6 +58,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Landing Page Development Services India | Webentric',
     description: DESCRIPTION,
+    images: ["https://webentric.in/social-media-cover.png"],
   },
 };
 

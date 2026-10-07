@@ -23,6 +23,7 @@ export const metadata = {
     title: 'Client Reviews & Google Ratings',
     description:
       'Read verified Google reviews for Webentric — Delhi businesses rate our website design & development 5 stars.',
+    images: ["https://webentric.in/social-media-cover.png"],
   },
 };
 
@@ -103,7 +104,7 @@ export default function ReviewsPage() {
   const avgRating = (REVIEWS.reduce((s, r) => s + r.rating, 0) / totalReviews).toFixed(1);
 
   return (
-    <section className="bg-page text-ink py-10 md:py-14">
+    <main className="bg-page text-ink py-10 md:py-14">
       <JsonLd
         data={[
           webPageSchema({
@@ -117,21 +118,24 @@ export default function ReviewsPage() {
           ]),
           {
             '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
+            '@type': 'ProfessionalService',
+            '@id': `${SITE.url}/reviews#reviews`,
             name: 'Webentric',
             url: `${SITE.url}/reviews`,
             image: SITE.logo,
             aggregateRating: {
               '@type': 'AggregateRating',
-              ratingValue: avgRating,
-              reviewCount: String(totalReviews),
-              bestRating: '5',
+              ratingValue: Number(avgRating),
+              reviewCount: totalReviews,
+              bestRating: 5,
+              worstRating: 1,
             },
+            // Only reviews with visible text are included; no relative
+            // dates are emitted because they are not valid ISO dates.
             review: REVIEWS.filter((r) => r.text).map((r) => ({
               '@type': 'Review',
               author: { '@type': 'Person', name: r.name },
-              datePublished: r.time,
-              reviewRating: { '@type': 'Rating', ratingValue: String(r.rating), bestRating: '5' },
+              reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5 },
               reviewBody: r.text,
             })),
           },
@@ -256,6 +260,6 @@ export default function ReviewsPage() {
           </p>
         </div>
       </div>
-    </section>
+    </main>
   );
 }

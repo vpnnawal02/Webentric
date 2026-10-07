@@ -17,6 +17,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Privacy Policy',
     description: 'Read Webentric\u2019s privacy policy — how a website development company in Delhi collects, uses and protects your information.',
+    images: ["https://webentric.in/social-media-cover.png"],
   },
 };
 

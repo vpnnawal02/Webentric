@@ -1,4 +1,5 @@
 import ContactForm from '../../components/ContactForm';
+import Breadcrumbs from '../../components/Breadcrumbs';
 import JsonLd from '../../components/JsonLd';
 import { SITE, webPageSchema, localBusinessSchema, breadcrumbSchema } from '../../lib/seo';
 
@@ -18,12 +19,13 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Contact Website Developers in Delhi',
     description: 'Get a free quote for website design & development in Delhi, India. Call, WhatsApp or send an enquiry — we reply within 24 hours on business days.',
+    images: ["https://webentric.in/social-media-cover.png"],
   },
 };
 
 export default function ContactPage() {
   return (
-    <section className="bg-page text-ink min-h-screen">
+    <main className="bg-page text-ink min-h-screen">
       <JsonLd
         data={[
           webPageSchema({ name: 'Contact Webentric — Website Developers in Delhi', url: `${SITE.url}/contact`, description: 'Contact Webentric for website design and development in Delhi, India.' }),
@@ -32,6 +34,7 @@ export default function ContactPage() {
         ]}
       />
       <div className="max-w-[1380px] mx-auto px-5 sm:px-8 lg:px-10 xl:px-14 py-14 md:py-20">
+        <Breadcrumbs items={[{ label: 'Contact' }]} />
         <div className="max-w-3xl mb-12 md:mb-16">
 
           <h1 className="text-[clamp(2.2rem,5vw,4.5rem)] leading-[1.02] tracking-[-0.04em] font-medium text-ink max-w-[12ch]">
@@ -81,7 +84,7 @@ export default function ContactPage() {
                   <p className="text-[11px] uppercase tracking-[0.18em] text-ink/35 mb-1">
                     Phone / WhatsApp
                   </p>
-                  <p className="text-ink/82">+91 9560342636</p>
+                  <a href="tel:+919560342636" className="text-ink hover:text-ink/70 transition-colors">+91 9560342636</a>
                 </div>
 
                 <div>
@@ -127,7 +130,11 @@ export default function ContactPage() {
                   <img
                     className="w-6 h-6 opacity-80 hover:opacity-100 transition-opacity"
                     src="https://img.icons8.com/material-outlined/96/whatsapp--v1.png"
-                    alt="WhatsApp"
+                    alt="Chat with Webentric on WhatsApp"
+                    width={24}
+                    height={24}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
               </div>
@@ -147,6 +154,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-    </section>
+    </main>
   );
 }

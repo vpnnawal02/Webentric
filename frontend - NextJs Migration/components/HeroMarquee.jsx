@@ -26,18 +26,28 @@ function ProjectCard({ project, hidden }) {
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
             </div>
-            <div className="p-4 flex items-center justify-between gap-3">
-                <div className="min-w-0">
-                    <h3 className="text-sm font-medium truncate">{project.title}</h3>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-muted truncate">
-                        {project.tech}
-                    </p>
+            <div className="p-4">
+                <div className="flex items-center justify-between gap-3">
+                    <div className="min-w-0">
+                        <h3 className="text-sm font-medium truncate">{project.title}</h3>
+                        <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-muted truncate">
+                            {project.tech}
+                        </p>
+                    </div>
+                    <FiArrowUpRight
+                        size={15}
+                        aria-hidden="true"
+                        className="text-muted group-hover:text-ink transition-colors shrink-0"
+                    />
                 </div>
-                <FiArrowUpRight
-                    size={15}
-                    aria-hidden="true"
-                    className="text-muted group-hover:text-ink transition-colors shrink-0"
-                />
+                {(project.result || project.description) && (
+                    <p
+                        title={project.result || project.description}
+                        className="mt-2 text-[13px] leading-[1.45] text-ink/65 whitespace-normal break-words"
+                    >
+                        {project.result || project.description}
+                    </p>
+                )}
             </div>
         </>
     );

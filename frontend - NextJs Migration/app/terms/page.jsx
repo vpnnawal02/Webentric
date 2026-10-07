@@ -17,6 +17,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Terms of Service',
     description: 'Terms of service for Webentric\u2019s website design & development services in Delhi, India.',
+    images: ["https://webentric.in/social-media-cover.png"],
   },
 };
 

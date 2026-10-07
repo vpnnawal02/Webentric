@@ -7,6 +7,7 @@ export const projects = [
         description:
             "Modern school website designed to showcase academics, admissions, facilities, achievements, notices, events, and student activities. Provides parents and students with easy access to important information through a professional and user-friendly digital platform.",
         tech: "React • Tailwind",
+        result: "Simplified admissions with online enquiries & notices",
         image: images.school,
         link: 'https://standrewschoolwebsite.netlify.app/'
     },
@@ -15,6 +16,7 @@ export const projects = [
         description:
             "A modern corporate website designed to showcase the company’s services, expertise, leadership, and capabilities through a clean, professional, and responsive digital experience. Built with a focus on performance, usability, and a strong brand presence.",
         tech: "React • Tailwind • Framer Motion • SMTP • Netlify",
+        result: "Built corporate trust with services & lead forms",
         image: images.avanza,
         link: 'https://avanzasurvey.netlify.app/'
     },
@@ -23,6 +25,7 @@ export const projects = [
         description:
             "A sleek interior design website showcasing stylish spaces, services, and easy ways to connect with designers.",
         tech: "React • Tailwind",
+        result: "Turned portfolio views into design consultations",
         image: images.interior_design,
         link: 'https://69e1fc47d738729194709684--heartfelt-valkyrie-f8acf5.netlify.app/'
     },
@@ -31,6 +34,7 @@ export const projects = [
         description:
             "A modern travel agency website showcasing destinations, travel packages, and seamless ways for customers to plan and enquire about their next trip.",
         tech: "React • Tailwind",
+        result: "Drove more trip enquiries with packages & itineraries",
         image: images.travel_agency,
         link: "https://travel-agency-webentric.netlify.app/"
     },
@@ -39,6 +43,7 @@ export const projects = [
         description:
             "A fully responsive salon landing page built using React, featuring clean UI, smooth animations, and optimized performance for a modern web experience.",
         tech: "React • Tailwind",
+        result: "Increased bookings with services, gallery & WhatsApp CTA",
         image: images.salon,
         link: 'https://salonwebsitebywebentric.netlify.app/'
     },
@@ -47,6 +52,7 @@ export const projects = [
         description:
             "Professional website for a box printing company showcasing custom packaging solutions, product catalogs, printing services, quality standards, and easy quote requests. Designed to help businesses present their packaging expertise and generate more customer inquiries online.",
         tech: "React • Tailwind",
+        result: "Generated more B2B quote requests for custom boxes",
         image: images.maple_prints,
         link: 'https://prints-webentric.netlify.app/'
     },
@@ -55,6 +61,7 @@ export const projects = [
         description:
             "A fully responsive cafe website page built using React, featuring clean UI, smooth animations, and optimized performance for a modern web experience.",
         tech: "React • Tailwind",
+        result: "Boosted footfall with menu, vibe & location highlights",
         image: images.my_cafe,
         link: 'https://my-cafe-webentric.netlify.app/'
     },
@@ -63,6 +70,7 @@ export const projects = [
         description:
             "Custom online store with product listings, shopping cart functionality, and secure checkout integration.",
         tech: "React • Stripe • Firebase",
+        result: "Enabled online sales with cart & secure checkout",
         image: images.ecommerce,
         link: 'https://e-commerce-vipin.netlify.app/'
     },
@@ -71,6 +79,7 @@ export const projects = [
         description:
             "Professional business website designed to showcase services and generate leads through optimized landing sections.",
         tech: "React • Tailwind",
+        result: "Converted visitors into leads with service-led sections",
         image: images.business,
         link: 'https://webentric.in/'
     },
@@ -79,6 +88,7 @@ export const projects = [
         description:
             "Modern Cafe website featuring your Vibe, Menu, and cats.",
         tech: "React • Tailwind",
+        result: "Showcased menu & vibe to bring in regulars",
         image: images.cafe,
         link: 'https://frabjous-elf-35e678.netlify.app/'
     },
@@ -87,6 +97,7 @@ export const projects = [
         description:
             "Modern landing page designed for Dental Clinic platform with clear call-to-actions and engaging visuals.",
         tech: "React • Tailwind",
+        result: "Filled appointment slots with clear CTAs & trust blocks",
         image: images.dental_clinic,
         link: ''
     },
@@ -95,6 +106,7 @@ export const projects = [
         description:
             "Modern Portfolio website featuring your skills, education, and mobile-friendly design.",
         tech: "React • Tailwind",
+        result: "Helped freelancer win clients with proof-led portfolio",
         image: images.portfolio,
         link: 'https://vipin-portfolio-web.netlify.app/'
     },
@@ -103,6 +115,7 @@ export const projects = [
         description:
             "Responsive website for a fitness center including membership plans, trainer profiles, and class schedules.",
         tech: "React • Tailwind",
+        result: "Grew memberships with plans, trainers & schedules",
         image: images.gym,
         link: 'https://gymshala.netlify.app/'
     },

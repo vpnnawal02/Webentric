@@ -42,6 +42,7 @@ const Footer = () => {
             <h2 className="text-ink font-medium text-lg tracking-[-0.02em] mb-6">Quick Links</h2>
             <div className="space-y-3">
               <Link href="/" className="text-sm text-ink/55 hover:text-ink transition-colors block">Home</Link>
+              <Link href="/about" className="text-sm text-ink/55 hover:text-ink transition-colors block">About Webentric</Link>
               <Link href="/portfolio" className="text-sm text-ink/55 hover:text-ink transition-colors block">Portfolio</Link>
               <Link href="/pricing" className="text-sm text-ink/55 hover:text-ink transition-colors block">Pricing</Link>
               <Link href="/reviews" className="text-sm text-ink/55 hover:text-ink transition-colors block">Reviews</Link>
@@ -77,7 +78,10 @@ const Footer = () => {
               </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.14em] text-ink/35 mb-1">Location</p>
-                <p className="text-sm text-ink/60">Delhi, India</p>
+                <p className="text-sm text-ink/60">
+                  <Link href="/locations/delhi" className="hover:text-ink transition-colors">Delhi</Link>, India ·{' '}
+                  <Link href="/about" className="hover:text-ink transition-colors">About us</Link>
+                </p>
               </div>
             </div>
             <a
