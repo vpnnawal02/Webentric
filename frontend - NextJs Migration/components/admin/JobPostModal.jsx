@@ -39,8 +39,8 @@ export default function JobPostModal({ initial, onClose, onSave, saving }) {
     "w-full rounded-xs border border-edge bg-surface px-2 py-1.5 text-xs text-ink placeholder:text-muted/70 focus:border-muted focus:outline-none focus:ring-0";
 
   return (
-    <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/30 px-4">
-      <div className="w-full max-w-lg rounded-sm border border-line bg-surface p-4 shadow-sm max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 z-40 flex items-end justify-center bg-black/30 sm:items-center sm:px-4">
+      <div className="w-full rounded-t-xl border border-line bg-surface p-4 pb-6 shadow-sm max-h-[92vh] overflow-y-auto sm:max-w-lg sm:rounded-sm sm:pb-4">
         <header className="mb-3 flex items-center justify-between">
           <h2 className="text-sm font-semibold text-ink">
             {initial ? "Edit position" : "New position"}
@@ -65,7 +65,7 @@ export default function JobPostModal({ initial, onClose, onSave, saving }) {
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             <div>
               <p className="mb-1 text-[11px] font-medium text-muted">Location</p>
               <input

@@ -29,20 +29,71 @@ export default function JobsManager({ jobs, onCreate, onUpdate, onDelete, onTogg
 
   return (
     <section>
-      <div className="mb-4 flex items-center justify-between">
-        <p className="text-xs text-muted">
+      <div className="mb-4 flex items-center justify-between gap-2">
+        <p className="min-w-0 text-xs text-muted">
           {jobs.length} position{jobs.length === 1 ? "" : "s"} ·{" "}
-          {jobs.filter((j) => j.is_active).length} active on the site
+          {jobs.filter((j) => j.is_active).length} active
         </p>
         <button
           onClick={openCreate}
-          className="rounded-xs border border-edge bg-accent px-3 py-1.5 text-xs font-medium text-on-accent hover:bg-accent/85"
+          className="shrink-0 rounded-xs border border-edge bg-accent px-3 py-2 text-xs font-medium text-on-accent hover:bg-accent/85 active:bg-accent/85"
         >
           + New position
         </button>
       </div>
 
-      <div className="rounded-sm border border-line bg-surface">
+      {/* Mobile cards */}
+      <div className="space-y-3 md:hidden" aria-label="Job positions">
+        {jobs.length === 0 && (
+          <p className="rounded-sm border border-line bg-surface px-3 py-6 text-center text-xs text-muted">
+            No positions yet. Publish your first opening.
+          </p>
+        )}
+        {jobs.map((job) => (
+          <article key={job.id} className="rounded-sm border border-line bg-surface p-4">
+            <div className="flex items-start justify-between gap-2">
+              <div className="min-w-0">
+                <h3 className="text-sm font-semibold text-ink">{job.title}</h3>
+                <p className="mt-0.5 text-[11px] text-muted">
+                  {job.location} · {job.type}
+                </p>
+              </div>
+              <button
+                onClick={() => onToggleActive(job)}
+                title={job.is_active ? "Hide from careers page" : "Show on careers page"}
+                className={`shrink-0 inline-flex items-center rounded-xs border px-2 py-1 text-[11px] font-medium ${
+                  job.is_active
+                    ? "bg-green-50 text-green-700 border-green-100"
+                    : "bg-subtle text-ink/60 border-line"
+                }`}
+              >
+                {job.is_active ? "Active" : "Hidden"}
+              </button>
+            </div>
+            <div className="mt-3 flex gap-2 border-t border-line pt-3">
+              <button
+                onClick={() => openEdit(job)}
+                className="flex-1 rounded-xs border border-edge px-3 py-2 text-xs font-medium text-ink/80 active:bg-subtle"
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => {
+                  if (window.confirm(`Delete "${job.title}"? Applications for it are kept.`)) {
+                    onDelete(job.id);
+                  }
+                }}
+                className="rounded-xs border border-edge px-3 py-2 text-xs font-medium text-red-600 active:bg-red-50"
+              >
+                Delete
+              </button>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {/* Desktop table */}
+      <div className="hidden rounded-sm border border-line bg-surface md:block">
         <div className="max-h-[70vh] overflow-auto">
           <table className="min-w-full border-collapse text-xs">
             <thead className="sticky top-0 bg-subtle">

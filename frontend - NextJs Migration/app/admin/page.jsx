@@ -233,12 +233,12 @@ export default function AdminDashboardPage() {
     return (
         <div className="min-h-screen bg-subtle text-ink">
             <div className="mx-auto max-w-6xl px-4 py-6">
-                <header className="mb-6 flex items-center justify-between">
-                    <div>
-                        <h1 className="text-xl font-semibold tracking-tight">
-                            Webentric Admin Dashboard
+                <header className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="min-w-0">
+                        <h1 className="truncate text-lg font-semibold tracking-tight sm:text-xl">
+                            Webentric Admin
                         </h1>
-                        <p className="mt-1 text-xs text-muted">
+                        <p className="mt-1 truncate text-xs text-muted">
                             {session?.user?.email || "Loading..."}
                         </p>
                     </div>
@@ -260,12 +260,12 @@ export default function AdminDashboardPage() {
                 </header>
 
                 {/* Tabs */}
-                <div className="mb-6 flex gap-1 rounded-sm border border-line bg-surface p-1">
+                <div className="mb-6 flex gap-1 overflow-x-auto rounded-sm border border-line bg-surface p-1">
                     {TABS.map((t) => (
                         <button
                             key={t.key}
                             onClick={() => setTab(t.key)}
-                            className={`flex-1 rounded-xs px-3 py-2 text-xs font-medium transition-colors ${
+                            className={`flex-1 whitespace-nowrap rounded-xs px-2 py-2 text-xs font-medium transition-colors sm:px-3 ${
                                 tab === t.key
                                     ? "bg-accent text-on-accent"
                                     : "text-muted hover:text-ink"

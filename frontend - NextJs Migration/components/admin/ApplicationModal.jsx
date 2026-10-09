@@ -34,8 +34,8 @@ export default function ApplicationModal({ application, onClose, onStatusChange,
   };
 
   return (
-    <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/30 px-4">
-      <div className="w-full max-w-md rounded-sm border border-line bg-surface p-4 shadow-sm max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 z-40 flex items-end justify-center bg-black/30 sm:items-center sm:px-4">
+      <div className="w-full rounded-t-xl border border-line bg-surface p-4 pb-6 shadow-sm max-h-[92vh] overflow-y-auto sm:max-w-md sm:rounded-sm sm:pb-4">
         <header className="mb-3 flex items-center justify-between">
           <h2 className="text-sm font-semibold text-ink">Application details</h2>
           <button

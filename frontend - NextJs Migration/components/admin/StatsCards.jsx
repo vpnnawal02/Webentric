@@ -9,7 +9,7 @@ export default function StatsCards({ stats }) {
     ];
 
     return (
-        <section className="mb-6 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
+        <section className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-4">
             {cards.map((card) => (
                 <div
                     key={card.label}
