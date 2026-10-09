@@ -37,6 +37,7 @@ export default function sitemap() {
         { route: "/pricing", priority: 0.9, changeFrequency: "monthly" },
         { route: "/reviews", priority: 0.7, changeFrequency: "monthly" },
         { route: "/contact", priority: 0.9, changeFrequency: "monthly" },
+        { route: "/careers", priority: 0.6, changeFrequency: "weekly" },
         { route: "/blogs", priority: 0.8, changeFrequency: "weekly" },
         { route: "/price-calculator", priority: 0.8, changeFrequency: "monthly" },
         ...SERVICES.map((r) => ({ route: r, priority: 0.9, changeFrequency: "monthly" })),

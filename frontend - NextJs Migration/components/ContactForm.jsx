@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { supabase } from '../lib/supabase.js';
+import { notifyLead } from '../lib/notifyLead.js';
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -76,6 +77,14 @@ export default function ContactForm() {
       setStatus({
         type: 'success',
         message: 'Thanks! Your message has been sent. We’ll get back within 24 hours.',
+      });
+
+      notifyLead({
+        source: 'Contact page',
+        name: form.name.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim(),
+        details: form.message.trim(),
       });
 
       setForm({

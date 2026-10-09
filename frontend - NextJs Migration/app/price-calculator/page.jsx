@@ -190,7 +190,7 @@ export default function PriceCalculatorPage() {
                     breadcrumbSchema([{ name: 'Home', url: SITE.url }, { name: 'Website Cost Calculator', url: `${SITE.url}/price-calculator` }]),
                 ]}
             />
-            <PopUpForm open={open} setOpen={setOpen} />
+            <PopUpForm open={open} setOpen={setOpen} source="Cost calculator" />
             <div className="max-w-6xl mx-auto">
 
                 {/* ── Header ── */}

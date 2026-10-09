@@ -2,10 +2,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { icons } from '../lib/assets.js';
 import { supabase } from '../lib/supabase.js';
+import { notifyLead } from '../lib/notifyLead.js';
 
 const CrossIcon = icons.cross_icon;
 
-export default function PopUpForm({ open, setOpen }) {
+export default function PopUpForm({ open, setOpen, source = 'Quote popup' }) {
     const overlayRef = useRef(null);
 
     const initialForm = {
@@ -87,6 +88,13 @@ export default function PopUpForm({ open, setOpen }) {
             setStatus({
                 type: "success",
                 message: "Request submitted successfully.",
+            });
+            notifyLead({
+                source,
+                name: form.name.trim(),
+                email: form.email.trim(),
+                phone: form.phone.trim(),
+                details: form.details.trim(),
             });
         } catch (err) {
             console.error(err);

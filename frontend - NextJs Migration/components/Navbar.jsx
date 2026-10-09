@@ -60,6 +60,7 @@ const MORE_SECTIONS = [
       { label: 'About', href: '/about' },
       { label: 'Blogs', href: '/blogs' },
       { label: 'Cost Calculator', href: '/price-calculator' },
+      { label: 'Careers', href: '/careers' },
     ],
   },
 ];

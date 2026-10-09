@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 import { Phone } from 'lucide-react';
 import { supabase } from '../lib/supabase.js';
+import { notifyLead } from '../lib/notifyLead.js';
 
 /*
  * Hero callback form: one phone field + "Request a call back" button.
@@ -55,6 +56,13 @@ export default function CallbackForm() {
         return;
       }
       setStatus('success');
+      notifyLead({
+        source: 'Homepage callback',
+        name: 'Callback request',
+        email: '',
+        phone: normalize(trimmed),
+        details: 'Callback request from homepage hero. Please call back.',
+      });
       setPhone('');
     } catch (err) {
       console.error(err);

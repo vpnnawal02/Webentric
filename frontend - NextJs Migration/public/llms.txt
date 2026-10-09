@@ -23,6 +23,7 @@
 - Pricing: https://webentric.in/pricing (Starter from ₹7,999; Business from ₹14,999; E-commerce from ₹29,999)
 - Cost calculator: https://webentric.in/price-calculator
 - Work: https://webentric.in/portfolio
+- Careers: https://webentric.in/careers
 - Reviews: https://webentric.in/reviews
 - Guides: https://webentric.in/blogs
 - Contact: https://webentric.in/contact

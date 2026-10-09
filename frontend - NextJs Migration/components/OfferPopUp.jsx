@@ -23,7 +23,7 @@ export default function OfferPopup() {
 
     return (
         <>
-            <PopUpForm open={open} setOpen={setOpen} />
+            <PopUpForm open={open} setOpen={setOpen} source="Offer popup" />
 
             <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center px-5">
                 <div className="relative w-full max-w-md border border-line bg-surface text-ink p-7 sm:p-8 shadow-2xl">

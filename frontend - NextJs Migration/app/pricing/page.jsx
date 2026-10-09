@@ -120,7 +120,7 @@ export default function PricingPage() {
                     breadcrumbSchema([{ name: 'Home', url: SITE.url }, { name: 'Pricing', url: `${SITE.url}/pricing` }]),
                 ]}
             />
-            <PopUpForm open={open} setOpen={setOpen} />
+            <PopUpForm open={open} setOpen={setOpen} source="Pricing page" />
 
             {/* Currency switcher — absolute top-right, overlays without pushing layout */}
             <div className="absolute top-3 right-3 sm:top-6 sm:right-6 lg:right-10 z-30">
